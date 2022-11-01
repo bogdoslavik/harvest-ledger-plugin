@@ -53,17 +53,21 @@ void handle_finalize(void *parameters) {
     PRINTF("MSG Address: %s\n", addr);
 
     contract_info_t info = find_contract_info(addr);
-    if (info.underlying_decimals == 0 && info.vault_decimals == 0) { // if contract info is not found
+    if (info.underlying_decimals == 0 &&
+        info.vault_decimals == 0) {  // if contract info is not found
 
         msg->result = ETH_PLUGIN_RESULT_UNAVAILABLE;
     } else {
-
         PRINTF("info.underlying decimals: %d, ticker: %s\n ",
                info.underlying_decimals,
                info.underlying_ticker);
-        PRINTF("info.vault      decimals: %d, ticker: %s\n ", info.vault_decimals, info.vault_ticker);
+        PRINTF("info.vault      decimals: %d, ticker: %s\n ",
+               info.vault_decimals,
+               info.vault_ticker);
 
-        strlcpy(context->underlying_ticker, info.underlying_ticker, sizeof(context->underlying_ticker));
+        strlcpy(context->underlying_ticker,
+                info.underlying_ticker,
+                sizeof(context->underlying_ticker));
         context->underlying_decimals = info.underlying_decimals;
         strlcpy(context->vault_ticker, info.vault_ticker, sizeof(context->vault_ticker));
         context->vault_decimals = info.vault_decimals;
