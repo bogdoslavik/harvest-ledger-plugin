@@ -52,15 +52,6 @@ static void set_destination_ui(ethQueryContractUI_t *msg, context_t *context) {
                                   msg->pluginSharedRW->sha3,
                                   chainId);
 
-    // make short representation of the address
-    m[6] = '.';
-    m[7] = '.';
-    m[8] = '.';
-    m[9] = m[38];
-    m[10] = m[39];
-    m[11] = m[40];
-    m[12] = m[41];
-    m[13] = '\0';
 }
 
 void handle_query_contract_ui(void *parameters) {
