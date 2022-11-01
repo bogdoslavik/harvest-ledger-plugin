@@ -30,7 +30,7 @@ contract_info_t find_contract_info(const char *a) {
 #include "contracts-info.txt"
 #include "contracts-info-tests.txt"
     // when contract not found
-    return (contract_info_t){"", 18, "", 18};
+    return (contract_info_t){"", 0, "", 0};
 }
 
 void handle_finalize(void *parameters) {
@@ -53,16 +53,22 @@ void handle_finalize(void *parameters) {
     PRINTF("MSG Address: %s\n", addr);
 
     contract_info_t info = find_contract_info(addr);
-    PRINTF("info.underlying decimals: %d, ticker: %s\n ",
-           info.underlying_decimals,
-           info.underlying_ticker);
-    PRINTF("info.vault      decimals: %d, ticker: %s\n ", info.vault_decimals, info.vault_ticker);
+    if (info.underlying_decimals == 0 && info.vault_decimals == 0) { // if contract info is not found
 
-    strlcpy(context->underlying_ticker, info.underlying_ticker, sizeof(context->underlying_ticker));
-    context->underlying_decimals = info.underlying_decimals;
-    strlcpy(context->vault_ticker, info.vault_ticker, sizeof(context->vault_ticker));
-    context->vault_decimals = info.vault_decimals;
+        msg->result = ETH_PLUGIN_RESULT_UNAVAILABLE;
+    } else {
 
-    msg->uiType = ETH_UI_TYPE_GENERIC;
-    msg->result = ETH_PLUGIN_RESULT_OK;
+        PRINTF("info.underlying decimals: %d, ticker: %s\n ",
+               info.underlying_decimals,
+               info.underlying_ticker);
+        PRINTF("info.vault      decimals: %d, ticker: %s\n ", info.vault_decimals, info.vault_ticker);
+
+        strlcpy(context->underlying_ticker, info.underlying_ticker, sizeof(context->underlying_ticker));
+        context->underlying_decimals = info.underlying_decimals;
+        strlcpy(context->vault_ticker, info.vault_ticker, sizeof(context->vault_ticker));
+        context->vault_decimals = info.vault_decimals;
+
+        msg->uiType = ETH_UI_TYPE_GENERIC;
+        msg->result = ETH_PLUGIN_RESULT_OK;
+    }
 }
