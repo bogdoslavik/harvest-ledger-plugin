@@ -5,7 +5,7 @@
 #include <string.h>
 
 // Number of selectors defined in this plugin. Should match the enum `selector_t`.
-#define NUM_SELECTORS      6
+#define NUM_SELECTORS      5
 #define STR_ADDRESS_LENGTH 43
 
 // Name of the plugin.

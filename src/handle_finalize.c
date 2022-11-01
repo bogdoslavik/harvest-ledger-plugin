@@ -28,6 +28,7 @@ contract_info_t find_contract_info(const char *a) {
 // /tests/harvest/update-contracts-info-b2c.mjs
 // or type: cd tests && npm run update-harvest
 #include "contracts-info.txt"
+#include "contracts-info-tests.txt"
     // when contract not found
     return (contract_info_t){"", 18, "", 18};
 }
