@@ -59,6 +59,8 @@ async function fetchJson(url) {
   return response.json();
 }
 
+let contractsInfo = [];
+
 async function updateContractsInfo(vaultsUrl) {
   const allVaults = await fetchJson(vaultsUrl);
 
@@ -66,11 +68,14 @@ async function updateContractsInfo(vaultsUrl) {
   await updateContractsForNetwork(56,  allVaults.bsc);
   await updateContractsForNetwork(137, allVaults.matic);
 
+  saveString(contractsInfoFile, contractsInfo.join('\n'));
 }
 
+
 async function updateContractsForNetwork(chainId, vaults) {
-  let contractsInfo = [];
   const contracts = [];
+
+  contractsInfo.push(`// ${chainId}`);
 
   for (const id in vaults) {
     const vault = vaults[id];
@@ -89,9 +94,6 @@ async function updateContractsForNetwork(chainId, vaults) {
       contractsInfo.push(contractsInfoPoolTemplate(vault));
     }
   }
-
-  const ci = contractsInfo.join('\n');
-  saveString(contractsInfoFile, ci);
 
   saveB2C(b2cFile, contracts, chainId);
 }
@@ -112,9 +114,11 @@ function saveObject(filename, obj) {
 }
 
 function saveString(filename, text) {
-  return fs.writeFile(filename, text, err => {
-    if (err) console.error(err);
-    else console.log('saved', filename);
+  fs.truncate(filename, 0, function() {
+    return fs.writeFile(filename, text, err => {
+      if (err) console.error(err);
+      else console.log('saved', filename);
+    });
   });
 }
 

@@ -5,7 +5,7 @@
 #include <string.h>
 
 // Number of selectors defined in this plugin. Should match the enum `selector_t`.
-#define NUM_SELECTORS 6
+#define NUM_SELECTORS      5
 #define STR_ADDRESS_LENGTH 43
 
 // Name of the plugin.
@@ -22,10 +22,7 @@ typedef enum {
 } selector_t;
 
 // Enumeration used to parse the smart contract data.
-typedef enum {
-    AMOUNT = 0,
-    UNEXPECTED_PARAMETER
-} parameter;
+typedef enum { AMOUNT = 0, UNEXPECTED_PARAMETER } parameter;
 
 extern const uint32_t HARVEST_SELECTORS[NUM_SELECTORS];
 
@@ -62,7 +59,6 @@ void handle_init_contract(void *parameters);
 void handle_finalize(void *parameters);
 void handle_provide_token(void *parameters);
 void handle_query_contract_id(void *parameters);
-
 
 typedef struct contract_info_t {
     // underlying
