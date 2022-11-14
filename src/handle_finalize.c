@@ -17,7 +17,7 @@ bool eq(const char *p1, const char *p2) {
 // contract_info_t so used simple if-else-if chain
 #define _HARVEST(address, underlying_ticker, underlying_decimals, vault_ticker, vault_decimals) \
     if (eq(a, address))                                                                         \
-        return &(contract_info_t){underlying_ticker,                                             \
+        return &(contract_info_t){underlying_ticker,                                            \
                                  underlying_decimals,                                           \
                                  vault_ticker,                                                  \
                                  vault_decimals};                                               \
