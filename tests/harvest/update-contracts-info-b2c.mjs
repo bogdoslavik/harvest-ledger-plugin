@@ -46,12 +46,12 @@ function b2cPoolTemplate(vault) {
 
 function contractsInfoVaultTemplate(v) {
   // address must be mixed case checksum
-  return `_HARVEST("${utils.getAddress(v.vaultAddress)}", "${v.id} ", ${v.decimals}, "f${v.id} ", 18);`;
+  return `_HARVEST("${utils.getAddress(v.vaultAddress)}", "${v.id} ", ${v.decimals}, "f${v.id} ", 18)`;
 }
 
 function contractsInfoPoolTemplate(v) {
   // address must be mixed case checksum
-  return `_HARVEST("${utils.getAddress(v.rewardPool)}", "f${v.id} ", 18, "", 18);`;
+  return `_HARVEST("${utils.getAddress(v.rewardPool)}", "f${v.id} ", 18, "", 18)`;
 }
 
 async function fetchJson(url) {
