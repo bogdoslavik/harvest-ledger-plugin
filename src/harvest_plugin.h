@@ -61,6 +61,7 @@ void handle_provide_token(void *parameters);
 void handle_query_contract_id(void *parameters);
 
 typedef struct contract_info_t {
+    char *address;
     // underlying
     char *underlying_ticker;
     uint8_t underlying_decimals;
