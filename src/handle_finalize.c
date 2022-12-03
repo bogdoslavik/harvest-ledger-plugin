@@ -34,7 +34,6 @@ const contract_info_t contracts[] = {
 };
 
 contract_info_t *find_contract_info(const char *address) {
-
     int len = sizeof(contracts) / sizeof(contracts[0]);
     PRINTF("Contracts length: %d\n", len);
     for (int i = 0; i < len; i++) {
