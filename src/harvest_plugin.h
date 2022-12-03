@@ -12,7 +12,7 @@
 #define PLUGIN_NAME "Harvest"
 
 // Enumeration of the different selectors possible.
-// Should follow the exact same order as the array declared in main.c
+// Should follow the exact same order as the array declared in contract.c
 typedef enum {
     VAULT_DEPOSIT = 0,
     VAULT_WITHDRAW,
