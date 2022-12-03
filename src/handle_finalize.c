@@ -38,7 +38,7 @@ contract_info_t *find_contract_info(const char *address) {
     int len = sizeof(contracts) / sizeof(contracts[0]);
     PRINTF("Contracts length: %d\n", len);
     for (int i = 0; i < len; i++) {
-        contract_info_t *ci = (contract_info_t*) PIC(&contracts[i]);
+        contract_info_t *ci = (contract_info_t *) PIC(&contracts[i]);
         if (eq(address, (char *) PIC(ci->address))) return ci;
     }
     // when contract is not found
@@ -81,7 +81,9 @@ void handle_finalize(void *parameters) {
                 (char *) PIC(info->underlying_ticker),
                 sizeof(context->underlying_ticker));
         context->underlying_decimals = info->underlying_decimals;
-        strlcpy(context->vault_ticker, (char *) PIC(info->vault_ticker), sizeof(context->vault_ticker));
+        strlcpy(context->vault_ticker,
+                (char *) PIC(info->vault_ticker),
+                sizeof(context->vault_ticker));
         context->vault_decimals = info->vault_decimals;
 
         msg->uiType = ETH_UI_TYPE_GENERIC;
