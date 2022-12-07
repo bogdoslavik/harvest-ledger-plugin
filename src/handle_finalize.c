@@ -37,7 +37,7 @@ contract_info_t *find_contract_info(const char *address) {
     int len = sizeof(contracts) / sizeof(contracts[0]);
     PRINTF("Contracts length: %d\n", len);
     for (int i = 0; i < len; i++) {
-        contract_info_t *ci = (contract_info_t *) PIC(&contracts[i]);
+        contract_info_t *ci = &contracts[i];
         if (eq(address, (char *) PIC(ci->address))) return ci;
     }
     // when contract is not found
