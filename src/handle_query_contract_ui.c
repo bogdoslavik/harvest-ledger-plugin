@@ -38,6 +38,7 @@ static void set_destination_ui(ethQueryContractUI_t *msg, context_t *context) {
             break;
         default:
             strlcpy(msg->title, "Pool", msg->titleLength);
+            break;
     }
 
     // Prefix the address with `0x`.

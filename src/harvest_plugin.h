@@ -12,7 +12,7 @@
 #define PLUGIN_NAME "Harvest"
 
 // Enumeration of the different selectors possible.
-// Should follow the exact same order as the array declared in main.c
+// Should follow the exact same order as the array declared in contract.c
 typedef enum {
     VAULT_DEPOSIT = 0,
     VAULT_WITHDRAW,
@@ -41,9 +41,6 @@ typedef struct context_t {
 
     // For parsing data.
     uint8_t next_param;  // Set to be the next param we expect to parse.
-    uint16_t offset;     // Offset at which the array or struct starts.
-    bool go_to_offset;   // If set, will force the parsing to iterate through parameters until
-                         // `offset` is reached.
 
     // For both parsing and display.
     selector_t selectorIndex;
@@ -61,6 +58,7 @@ void handle_provide_token(void *parameters);
 void handle_query_contract_id(void *parameters);
 
 typedef struct contract_info_t {
+    char *address;
     // underlying
     char *underlying_ticker;
     uint8_t underlying_decimals;
