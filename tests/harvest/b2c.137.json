@@ -407,6 +407,265 @@
 					"plugin": "Harvest"
 				}
 			}
+		},
+		{
+			"address": "0x78e9d16341b56d55516349955e49647de42ab107",
+			"contractName": "Vault",
+			"selectors": {
+				"0xb6b55f25": {
+					"erc20OfInterest": [],
+					"method": "deposit",
+					"plugin": "Harvest"
+				},
+				"0x2e1a7d4d": {
+					"erc20OfInterest": [],
+					"method": "withdraw",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0x19d1e89e86882d61837960cb17cf29a3559104f0",
+			"contractName": "NoMintRewardPool",
+			"selectors": {
+				"0xa694fc3a": {
+					"erc20OfInterest": [],
+					"method": "stake",
+					"plugin": "Harvest"
+				},
+				"0x3d18b912": {
+					"erc20OfInterest": [],
+					"method": "getReward",
+					"plugin": "Harvest"
+				},
+				"0xe9fad8ee": {
+					"erc20OfInterest": [],
+					"method": "exit",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0xfbdb43f342b2a483460f72082d8b37af6b322b58",
+			"contractName": "Vault",
+			"selectors": {
+				"0xb6b55f25": {
+					"erc20OfInterest": [],
+					"method": "deposit",
+					"plugin": "Harvest"
+				},
+				"0x2e1a7d4d": {
+					"erc20OfInterest": [],
+					"method": "withdraw",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0x6614cf2945abeb374add5437a955f3b2aeeaaa70",
+			"contractName": "NoMintRewardPool",
+			"selectors": {
+				"0xa694fc3a": {
+					"erc20OfInterest": [],
+					"method": "stake",
+					"plugin": "Harvest"
+				},
+				"0x3d18b912": {
+					"erc20OfInterest": [],
+					"method": "getReward",
+					"plugin": "Harvest"
+				},
+				"0xe9fad8ee": {
+					"erc20OfInterest": [],
+					"method": "exit",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0x1f1005e19aed5fa896e76d11a6969fe404429a32",
+			"contractName": "Vault",
+			"selectors": {
+				"0xb6b55f25": {
+					"erc20OfInterest": [],
+					"method": "deposit",
+					"plugin": "Harvest"
+				},
+				"0x2e1a7d4d": {
+					"erc20OfInterest": [],
+					"method": "withdraw",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0x0eb498458af6548fc4bb101f288ef792fe585e16",
+			"contractName": "NoMintRewardPool",
+			"selectors": {
+				"0xa694fc3a": {
+					"erc20OfInterest": [],
+					"method": "stake",
+					"plugin": "Harvest"
+				},
+				"0x3d18b912": {
+					"erc20OfInterest": [],
+					"method": "getReward",
+					"plugin": "Harvest"
+				},
+				"0xe9fad8ee": {
+					"erc20OfInterest": [],
+					"method": "exit",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0xa61b32840af9a9e89e282624eb3eabca10da4864",
+			"contractName": "Vault",
+			"selectors": {
+				"0xb6b55f25": {
+					"erc20OfInterest": [],
+					"method": "deposit",
+					"plugin": "Harvest"
+				},
+				"0x2e1a7d4d": {
+					"erc20OfInterest": [],
+					"method": "withdraw",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0xd89d977ddd1d587a7dbb610cf6780885ca6af1c2",
+			"contractName": "NoMintRewardPool",
+			"selectors": {
+				"0xa694fc3a": {
+					"erc20OfInterest": [],
+					"method": "stake",
+					"plugin": "Harvest"
+				},
+				"0x3d18b912": {
+					"erc20OfInterest": [],
+					"method": "getReward",
+					"plugin": "Harvest"
+				},
+				"0xe9fad8ee": {
+					"erc20OfInterest": [],
+					"method": "exit",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0xe75b171d1c7eb711e915f8f19cc17925e8b53f51",
+			"contractName": "Vault",
+			"selectors": {
+				"0xb6b55f25": {
+					"erc20OfInterest": [],
+					"method": "deposit",
+					"plugin": "Harvest"
+				},
+				"0x2e1a7d4d": {
+					"erc20OfInterest": [],
+					"method": "withdraw",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0x55a68b1489ee56b64591f041d8d3a05adb61961d",
+			"contractName": "NoMintRewardPool",
+			"selectors": {
+				"0xa694fc3a": {
+					"erc20OfInterest": [],
+					"method": "stake",
+					"plugin": "Harvest"
+				},
+				"0x3d18b912": {
+					"erc20OfInterest": [],
+					"method": "getReward",
+					"plugin": "Harvest"
+				},
+				"0xe9fad8ee": {
+					"erc20OfInterest": [],
+					"method": "exit",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0x47fd16b0f46177fc94f7b57e0cdc6fdcb1b461d3",
+			"contractName": "Vault",
+			"selectors": {
+				"0xb6b55f25": {
+					"erc20OfInterest": [],
+					"method": "deposit",
+					"plugin": "Harvest"
+				},
+				"0x2e1a7d4d": {
+					"erc20OfInterest": [],
+					"method": "withdraw",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0xc76427fcbdf9040bd6ed65769b518d65071d39df",
+			"contractName": "NoMintRewardPool",
+			"selectors": {
+				"0xa694fc3a": {
+					"erc20OfInterest": [],
+					"method": "stake",
+					"plugin": "Harvest"
+				},
+				"0x3d18b912": {
+					"erc20OfInterest": [],
+					"method": "getReward",
+					"plugin": "Harvest"
+				},
+				"0xe9fad8ee": {
+					"erc20OfInterest": [],
+					"method": "exit",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0x995341f196ced4ef52abd0bcc4c3c69574ed207e",
+			"contractName": "Vault",
+			"selectors": {
+				"0xb6b55f25": {
+					"erc20OfInterest": [],
+					"method": "deposit",
+					"plugin": "Harvest"
+				},
+				"0x2e1a7d4d": {
+					"erc20OfInterest": [],
+					"method": "withdraw",
+					"plugin": "Harvest"
+				}
+			}
+		},
+		{
+			"address": "0x350802cceb6129566852fbddb75272ee565e9798",
+			"contractName": "NoMintRewardPool",
+			"selectors": {
+				"0xa694fc3a": {
+					"erc20OfInterest": [],
+					"method": "stake",
+					"plugin": "Harvest"
+				},
+				"0x3d18b912": {
+					"erc20OfInterest": [],
+					"method": "getReward",
+					"plugin": "Harvest"
+				},
+				"0xe9fad8ee": {
+					"erc20OfInterest": [],
+					"method": "exit",
+					"plugin": "Harvest"
+				}
+			}
 		}
 	],
 	"name": "Harvest"

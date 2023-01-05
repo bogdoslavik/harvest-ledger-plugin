@@ -3,11 +3,11 @@
 import fetch from 'isomorphic-fetch';
 import fs from 'fs';
 import {utils} from 'ethers';
-import VaultAbi from './abis/harvest_vault.json';
-import PoolAbi from './abis/harvest_pool.json';
+import VaultAbi from './abis/harvest_vault.json' assert { type: "json" };
+import PoolAbi from './abis/harvest_pool.json' assert { type: "json" };
 const VAULTS_URL = 'https://api-ui.harvest.finance/vaults?key=41e90ced-d559-4433-b390-af424fdc76d6'
 
-const abisPath = 'harvest/abis/';
+const abisPath = 'harvest/abis';
 const b2cFile = 'harvest/b2c';
 const contractsInfoFile = '../src/contracts-info.txt';
 
@@ -83,6 +83,7 @@ async function updateContractsForNetwork(chainId, vaults) {
     if (vault.inactive) continue;
 
     saveContract(abisPath, vault.vaultAddress.toLowerCase(), VaultAbi);
+    saveContract(abisPath + '/' + chainId, vault.vaultAddress.toLowerCase(), VaultAbi);
     contracts.push(b2cVaultTemplate(vault));
 
     // if vault have rewardPool then add its contract
@@ -90,6 +91,7 @@ async function updateContractsForNetwork(chainId, vaults) {
 
     if (vault.rewardPool) {
       saveContract(abisPath, vault.rewardPool.toLowerCase(), PoolAbi);
+      saveContract(abisPath + '/' + chainId, vault.rewardPool.toLowerCase(), PoolAbi);
       contracts.push(b2cPoolTemplate(vault));
       contractsInfo.push(contractsInfoPoolTemplate(vault));
     }
